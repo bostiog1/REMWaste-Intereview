@@ -50,7 +50,6 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
       aria-disabled={isHeavyWasteWarning}
     >
       <div className="relative">
-        {/* Skip image */}
         <img
           src={Image}
           alt={`${skip.size} Yard Skip`}
@@ -61,7 +60,6 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
           height={200}
         />
 
-        {/* Size badge */}
         <div
           className={`absolute top-3 right-3 ${getSizeColor(
             skip.size
@@ -70,14 +68,12 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
           {skip.size} Yards
         </div>
 
-        {/* Selected badge */}
         {isSelected && (
           <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-md font-medium flex items-center shadow-lg">
             <Check size={16} className="mr-1" /> Selected
           </div>
         )}
 
-        {/* Capacity visualization */}
         <div className="absolute bottom-3 left-3 right-3 bg-gray-900/70 backdrop-blur-sm p-2 rounded-md">
           <div className="flex justify-between text-xs text-white mb-1">
             <span>Capacity</span>
@@ -91,7 +87,6 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
           </div>
         </div>
 
-        {/* Warnings */}
         {skip.warnings.length > 0 && (
           <div className="absolute -bottom-1 left-0 w-full bg-amber-950/80 backdrop-blur-sm p-2 rounded-t-md border-t border-x border-amber-900/60 text-white text-xs">
             {skip.warnings.map((warning, index) => (
@@ -117,7 +112,6 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
         )}
       </div>
 
-      {/* Card Content */}
       <div className="p-5">
         <h3 className="text-xl font-bold flex items-center">
           {skip.size} Yard Skip
@@ -128,7 +122,6 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
           )}
         </h3>
 
-        {/* Features list */}
         <div className="mt-3 text-gray-300 text-sm grid gap-2">
           <div className="flex items-start">
             <Info
@@ -156,7 +149,6 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
           )}
         </div>
 
-        {/* Pricing */}
         <div className="mt-4 flex justify-between items-end">
           <div>
             <span className="text-blue-500 text-2xl font-bold">
@@ -170,7 +162,6 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
           </div>
         </div>
 
-        {/* Action Button */}
         <button
           onClick={(e) => {
             e.stopPropagation();

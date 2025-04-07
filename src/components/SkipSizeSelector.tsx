@@ -57,7 +57,6 @@ function SkipSizeSelector() {
 
   return (
     <div className="flex flex-col items-center">
-      {/* Progress Stepper */}
       <div className="w-full max-w-6xl mb-8">
         <div className="flex flex-wrap items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
@@ -94,7 +93,6 @@ function SkipSizeSelector() {
         </div>
       </div>
 
-      {/* Header Section */}
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
           Choose Your Skip Size
@@ -104,7 +102,6 @@ function SkipSizeSelector() {
           ensures you'll find the right fit for your waste removal needs.
         </p>
 
-        {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mt-6">
           {filterOptions.map((option) => (
             <button
@@ -122,7 +119,6 @@ function SkipSizeSelector() {
         </div>
       </div>
 
-      {/* Sticky Header when Skip is Selected */}
       {isHeaderSticky && selectedSkipDetails && (
         <div className="fixed top-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm z-50 shadow-lg transition-all duration-300 border-b border-gray-800 transform">
           <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
@@ -145,7 +141,6 @@ function SkipSizeSelector() {
         </div>
       )}
 
-      {/* Skip Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {filteredSkips(skipsFromApi).map((skip) => (
           <SkipCard
@@ -157,13 +152,11 @@ function SkipSizeSelector() {
         ))}
       </div>
 
-      {/* Result count */}
       <div className="w-full max-w-6xl mt-4 mb-6 text-sm text-gray-400">
         Showing {filteredSkips(skipsFromApi).length} skip{" "}
         {filteredSkips(skipsFromApi).length === 1 ? "option" : "options"}
       </div>
 
-      {/* Navigation Buttons */}
       <div className="w-full max-w-6xl mt-6 mb-12 flex items-center justify-between">
         <button className="px-6 py-3 rounded-md bg-gray-800 text-white hover:bg-gray-700 flex items-center transition-all duration-200">
           <ChevronLeft size={18} className="mr-2" /> Back
